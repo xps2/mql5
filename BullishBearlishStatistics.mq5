@@ -199,8 +199,8 @@ void MakeStatisticsFile(const string file_name,
 
         FileWrite(file_handle, "", "総データ数", "陽線合計", "陰線合計", "同値合計", "陽線確率(陽線合計/総データ数)", "陰線確率(陰線合計/総データ数)", "同値確率(同値合計/総データ数)");
         for(int i = 0; i < key_array.Total(); i++) {
-            int temp_sum, temp_sum_bull, temp_sum_bear, temp_sum_same;
-            double temp_bull, temp_bear, temp_same;
+            int temp_sum = 0, temp_sum_bull = 0, temp_sum_bear = 0, temp_sum_same = 0;
+            double temp_bull = 0, temp_bear = 0, temp_same = 0;
             sum_dict.TryGetValue(key_array[i], temp_sum);
             sum_bull_dict.TryGetValue(key_array[i], temp_sum_bull);
             sum_bear_dict.TryGetValue(key_array[i], temp_sum_bear);
